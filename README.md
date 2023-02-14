@@ -30,5 +30,7 @@ void loop(){
 
 ## References
 
+There is a circuit for using IR camera as I2C device.[1]
+
 1. kako, Kako Homepage, Wiiリモコンのポインティング用赤外線センサ部品の解析 [http://www.kako.com/neta/2007-001/2007-001.html](http://www.kako.com/neta/2007-001/2007-001.html)
 2. kako, Kako Homepage, Wiiリモコンの赤外線センサをマイコンに接続して使ってみる (+マウス化)[http://www.kako.com/neta/2008-009/2008-009.html](http://www.kako.com/neta/2008-009/2008-009.html)
