@@ -21,8 +21,11 @@ void wiiIRcam::begin() {
 
   Wire.begin();
   Wire.setClock(WIIMOTE_I2C_CLOCK);
+#if defined (ESP32)
+  Wire.setTimeout(2500);
+#elif defined (__AVR__)
   Wire.setWireTimeout(2500, true);
-
+#endif
 
   write2byte(0x30, 0x01);
   write2byte(0x30, 0x08);
@@ -36,7 +39,11 @@ void wiiIRcam::begin() {
 void wiiIRcam::begin(uint8_t sensitivity){
   Wire.begin();
   Wire.setClock(WIIMOTE_I2C_CLOCK);
+#if defined (ESP32)
+  Wire.setTimeout(2500);
+#elif defined (__AVR__)
   Wire.setWireTimeout(2500, true);
+#endif
 
   uint8_t p0, p1, p2, p3;
   if(sensitivity == 0){
